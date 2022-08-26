@@ -21,9 +21,9 @@ void setup() {
     if (sensorValue > sensorHigh) {
       sensorHigh = sensorValue;
     }
-    If sensorValue is less than sensorLow (set to 1023 initially) then change sensorLow to sensorValue
+    // If sensorValue is less than sensorLow (set to 1023 initially) then change sensorLow to sensorValue
     if (sensorValue < sensorLow) {
-      sensorLow = SensorValue;
+      sensorLow = sensorValue;
     }
   }
   // Turn the microcontroller LED off to signify the end of the calibration period.
