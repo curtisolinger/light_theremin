@@ -32,6 +32,21 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Read the value coming from the phototransistor and store that in sensorValue.
+  // Notice this is down in the setup function but not as a global variable.
+  sensorValue = analogRead(A0);
+
+  // Create useable value for the piezo by scaling numbers
+  // 5 arguments: the number to be scaled; min value of the input; max value of input; min value of output; max value of output
+  int pitch = map(sensorValue, sensorLow, sensorHigh, 50, 4000);
+
+  // Function to play a sound
+  // 3 arguments: pin to play the sound; frequency to play; how long to play (milliseconds)
+  tone(8, pitch, 20);
+
+  // Call delay to give the sound some time to play
+  delay(10);
+  
+   
 
 }
