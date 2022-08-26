@@ -46,7 +46,4 @@ void loop() {
 
   // Call delay to give the sound some time to play
   delay(10);
-  
-   
-
 }
